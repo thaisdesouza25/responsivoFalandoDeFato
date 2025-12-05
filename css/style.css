@@ -1,0 +1,839 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Importa a fonte 'Outfit' do Google Fonts, garantindo que todos os pesos (100 a 900) estejam disponíveis. */
+
+:root {
+    /* O seletor ':root' define variáveis CSS globais que podem ser usadas em todo o projeto. */
+
+    /* 1. VARIÁVEIS PARA AS ESPESSURAS (FONT-WEIGHT) */
+    --font-weight-regular: 400;
+    /* Define a variável para o peso regular da fonte. */
+    --font-weight-medium: 500;
+    /* Define a variável para o peso médio da fonte. */
+    --font-weight-semibold: 600;
+    /* Define a variável para o peso semi-negrito da fonte. */
+    --font-weight-bold: 700;
+    /* Define a variável para o peso negrito da fonte. */
+    --font-weight-extrabold: 800;
+    /* Define a variável para o peso extra-negrito da fonte. */
+
+    /* 2. VARIÁVEL PARA O NOME DA FAMÍLIA DE FONTES */
+    --font-family-principal: 'Outfit', sans-serif;
+    /* Define a variável para a família de fontes principal. */
+}
+
+* {
+    /* O seletor universal '*' aplica regras a **todos** os elementos da página. */
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos. */
+    padding: 0;
+    /* Remove o preenchimento (padding) padrão de todos os elementos. */
+    box-sizing: border-box;
+    /* Garante que o padding e a borda sejam incluídos dentro da largura e altura total do elemento (facilita o layout). */
+    font-family: "Outfit", sans-serif;
+    /* Aplica a fonte 'Outfit' a todos os elementos. */
+    text-decoration: none;
+    /* Remove sublinhados de links e outros elementos de texto. */
+    list-style: none;
+    /* Remove os marcadores de lista padrão (pontos, números, etc.) de <li>. */
+}
+
+body {
+    /* Estilos aplicados ao corpo da página. */
+    background-image: url(../fundos/image-fundo-header.svg);
+    /* Define a imagem de fundo para o cabeçalho. */
+    background-size: 100%;
+    /* Redimensiona a imagem de fundo para cobrir 100% da largura. */
+    background-repeat: no-repeat;
+    /* Impede que a imagem de fundo seja repetida. */
+}
+
+header {
+    /* Estilos aplicados ao cabeçalho (topo da página). */
+    max-width: 1080px;
+    /* Define uma largura máxima para o conteúdo do cabeçalho. */
+    margin: auto;
+    /* Centraliza o cabeçalho horizontalmente dentro do 'body'. */
+    display: flex;
+    /* Ativa o Flexbox para alinhar os itens (logo, navegação) na mesma linha. */
+    justify-content: space-between;
+    /* Distribui o espaço entre a logo e o elemento <nav>. */
+    padding: 54px 36px;
+    /* Adiciona preenchimento (padding) superior/inferior e lateral. */
+}
+
+nav {
+    /* Estilos aplicados ao elemento de navegação. */
+    display: flex;
+    /* Ativa o Flexbox. */
+    align-items: center;
+    /* Centraliza os itens verticalmente (menu de links e botões). */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente (embora 'space-between' no 'header' já os posicione). */
+    gap: 150px;
+    /* Define um grande espaçamento entre o <ul> (links) e o <div> (botões). */
+
+    ul {
+        /* Estilos aplicados à lista não ordenada (menu de links) dentro do 'nav'. */
+        display: flex;
+        /* Ativa o Flexbox para alinhar os links horizontalmente. */
+        gap: 36px;
+        /* Espaçamento entre os itens da lista (links). */
+
+        li a {
+            /* Estilos aplicados aos links <a> dentro dos itens da lista <li>. */
+            font-weight: 500;
+            /* Peso médio da fonte. */
+            font-size: 30px;
+            /* Tamanho da fonte dos links. */
+            color: #000;
+            /* Cor do texto preta. */
+        }
+    }
+
+    buttom {
+        /* Seletor incorreto (deveria ser 'button' ou '.nav div button'). */
+        width: 289px;
+        /* Define a largura para o (provável) elemento 'button'. */
+        height: 60px;
+        /* Define a altura para o (provável) elemento 'button'. */
+    }
+
+    button:first-child {
+        /* Estilos aplicados ao primeiro botão dentro do 'nav div' (Provavelmente o "Login"). */
+        font-weight: 500;
+        /* Peso médio da fonte. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+        background-color: transparent;
+        /* Cor de fundo azul claro. */
+        border: none;
+        /* Remove a borda padrão do botão. */
+
+    }
+
+    button:last-child {
+        /* Estilos aplicados ao último botão dentro do 'nav div' (Provavelmente o "Cadastre-se"). */
+        font-weight: 500;
+        /* Peso médio da fonte. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+        border: none;
+        /* Remove a borda. */
+        border-radius: 25px;
+        /* Borda arredondada (mais que os botões do header). */
+        width: 194px;
+        /* Largura menor que o primeiro botão. */
+        height: 55px;
+        /* Altura menor que o primeiro botão. */
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.25);
+        /* Adiciona uma sombra suave ao botão. */
+        background: #45a353;
+        /* Cor de fundo verde. */
+    }
+}
+
+section {
+    /* Estilos aplicados a todas as seções principais da página. */
+    max-width: 1080px;
+    /* Define uma largura máxima para o conteúdo das seções. */
+    margin: auto;
+    /* Centraliza a seção horizontalmente. */
+    /* Centraliza horizontalmente e remove a margem vertical desnecessária */
+    padding: 0px 36px;
+    /* Adiciona preenchimento superior/inferior e lateral. */
+
+}
+
+.home {
+    /* Estilos específicos para a seção 'home'. */
+    display: flex;
+    /* Ativa o Flexbox para alinhar o conteúdo (.content) e a imagem. */
+    justify-content: space-between;
+    /* Distribui o espaço entre o texto e a imagem. */
+    align-items: center;
+    /* Centraliza o texto e a imagem verticalmente. */
+
+    img {
+        margin-top: 80px;
+    }
+
+    .content {
+        /* Estilos para a div de conteúdo (título, parágrafo, botões) dentro de '.home'. */
+        display: flex;
+        /* Ativa o Flexbox. */
+        flex-direction: column;
+        /* Empilha os itens verticalmente. */
+        gap: 15px;
+        /* Espaçamento vertical entre os itens (h1, p, div de botões). */
+
+
+        h1 {
+            /* Estilos para o título principal. */
+            font-weight: 700;
+            /* Peso negrito da fonte. */
+            font-size: 85px;
+            /* Grande tamanho de fonte. */
+            color: #000;
+            /* Cor do texto preta. */
+            line-height: 1;
+            /* Altura da linha reduzida (importante para o espaçamento entre as linhas do título). */
+
+            span {
+                /* Estilos aplicados ao <span> dentro do <h1> ("DE FATO"). */
+                background: linear-gradient(180deg, #37c24b 49%, #1d876b 84%, #034b8a 96%);
+                /* Cria um gradiente de três cores para o fundo do texto. */
+                background-clip: text;
+                /* Limita o gradiente à área do texto. */
+                -webkit-background-clip: text;
+                /* Prefixo para navegadores WebKit (Chrome, Safari). */
+                -webkit-text-fill-color: transparent;
+                /* Torna a cor do texto transparente para que o gradiente apareça. */
+                margin: 0;
+                /* Remove margens extras. */
+                padding: 0;
+                /* Remove preenchimentos extras. */
+                /* Linha de altura (line-height) também pode afetar verticalmente */
+                line-height: 1;
+                /* Altura da linha igual ao h1, para consistência. */
+
+            }
+        }
+
+        p {
+            /* Estilos para o parágrafo de introdução. */
+            font-weight: 400;
+            /* Peso regular da fonte. */
+            font-size: 40px;
+            /* Tamanho grande da fonte. */
+            color: #000;
+            /* Cor do texto preta. */
+        }
+
+        bottom {
+            /* Seletor incorreto (deveria ser 'div' ou '.content div'). */
+            display: flex;
+            /* Ativa o Flexbox para alinhar os botões. */
+            /* Os botões precisam ser itens flexíveis */
+            gap: 15px;
+            /* Espaçamento entre os botões. */
+            /* A distância desejada entre Login e Cadastre-se */
+        }
+
+        button:first-child {
+            /* Estilos para o primeiro botão dentro do '.content div' ("Teste agora"). */
+            background-color: #45A353;
+            /* Cor de fundo verde. */
+            border: none;
+            /* Remove a borda. */
+            font-size: 30px;
+            /* Tamanho da fonte. */
+            color: #fff;
+            /* Cor do texto branca. */
+            border-radius: 25px;
+            /* Borda arredondada. */
+            width: 200px;
+            height: 60px;
+            /* Altura fixa. */
+        }
+    }
+}
+
+
+.linha {
+    /* Estilos para a div que contém a imagem da linha separadora. */
+    display: flex;
+    /* Ativa o Flexbox. */
+    justify-content: center;
+    /* Centraliza a imagem horizontalmente. */
+    align-items: flex-end;
+    /* Alinha a imagem à parte inferior do container (pouco efeito aqui sem altura definida). */
+    padding: 100px 0 0 0;
+    /* Adiciona um grande preenchimento superior para criar espaço. */
+}
+
+h2 {
+    /* Estilos para o título 'Por que confiar na IA...'. */
+    display: flex;
+    /* Ativa o Flexbox (embora não seja estritamente necessário para centralizar texto). */
+    justify-content: center;
+    /* Centraliza o texto horizontalmente. */
+    align-items: center;
+    /* Centraliza verticalmente. */
+    display: flex;
+    /* Redundante, mas mantém o Flexbox. */
+    font-weight: 500;
+    /* Peso médio da fonte. */
+    font-size: 40px;
+    /* Tamanho da fonte. */
+    color: #000;
+    /* Cor do texto preta. */
+    padding: 33px;
+    /* Adiciona preenchimento em torno do título. */
+}
+
+.icon1,
+.icon2,
+.icon3 {
+    /* Estilos aplicados aos cards de funcionalidades (IA, Fontes, Atualizada). */
+    gap: 22px;
+    /* Espaçamento entre os elementos internos (imagem e div/card de texto). */
+    background-color: #d4defb;
+    /* Cor de fundo azul claro. */
+    display: flex;
+    /* Ativa o Flexbox. */
+    flex-direction: column;
+    /* Empilha os itens verticalmente. */
+    padding: 15px;
+    /* Preenchimento interno. */
+    align-items: flex-start;
+    /* Alinha o conteúdo à esquerda dentro do card. */
+    border-radius: 25px;
+    width: 186px;
+    height: 233px;
+
+
+    p:first-child {
+        /* Estilos para o primeiro parágrafo dentro dos cards de ícones (título do card). */
+        gap: 22px;
+        /* Espaçamento (pouco efeito em um único parágrafo). */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 20px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+    }
+
+    p:last-child {
+        /* Estilos para o último parágrafo dentro dos cards de ícones (descrição do card). */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 15px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+    }
+}
+
+.features-container {
+    /* Estilos para o container que agrupa os cards de funcionalidades. */
+    display: flex;
+    /* Ativa o Flexbox para alinhamento horizontal. */
+    /* Alinha os cards horizontalmente */
+    justify-content: center;
+    /* Centraliza os cards no meio do container. */
+    /* Distribui os itens no espaço disponível */
+    gap: 28px;
+    /* Espaçamento entre os cards. */
+    /* Adiciona o espaçamento de 28px entre eles */
+}
+
+
+.golpes {
+    /* Estilos para a seção de 'Golpes Recentes'. */
+    border-radius: 30px;
+    /* Borda arredondada para a seção inteira. */
+    width: 718px;
+    /* Largura fixa. */
+    height: 456px;
+    /* Altura fixa. */
+    background: #d4defb;
+    /* Cor de fundo azul claro. */
+    gap: 36px;
+    /* Espaçamento interno. */
+    margin-top: 88px;
+    /* Margem superior para separar da seção anterior. */
+
+
+    h3 {
+        /* Estilos para o título 'Golpes Recentes:'. */
+        display: flex;
+        /* Ativa o Flexbox. */
+        align-items: flex-start;
+        /* Alinha o texto ao topo. */
+        font-weight: 500;
+        /* Peso médio. */
+        font-size: 25px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+        margin-bottom: 50px;
+        /* Margem inferior para separar do primeiro grupo de cards. */
+        text-decoration: underline;
+        /* Adiciona um sublinhado. */
+        padding-top: 15px;
+    }
+}
+
+.card2 {
+    margin-top: 40px;
+}
+
+.card1,
+.card2 {
+    /* Estilos aplicados aos quatro cards de golpes. */
+    display: flex;
+    /* Ativa o Flexbox para alinhar ícone e texto. */
+    align-items: center;
+    /* Centraliza os itens verticalmente. */
+    border-radius: 35px;
+    /* Borda arredondada. */
+    width: 522px;
+    /* Largura fixa. */
+    height: 142px;
+    /* Altura fixa. */
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+    /* Sombra ao redor do card. */
+    background: #fff;
+    /* Cor de fundo branca. */
+    padding: 32px;
+    /* Preenchimento interno. */
+
+    p {
+        /* Estilos para o parágrafo de texto dentro dos cards. */
+        font-weight: 600;
+        /* Peso semi-negrito (para o título do golpe). */
+        font-size: 25px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+        align-items: end;
+        /* Alinha à parte inferior. */
+        justify-content: end;
+        /* Alinha à direita. */
+        margin-left: auto;
+        /* Empurra o parágrafo para a direita, alinhado após o ícone. */
+
+    }
+
+    p span {
+        /* Estilos para o <span> dentro do parágrafo (descrição do golpe). */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 18px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+
+    }
+}
+
+.golpes-card1 {
+    /* Estilos para o container da primeira linha de cards de golpes. */
+    /* Ativa o Flexbox. */
+    /* Alinha os cards horizontalmente */
+    justify-content: center;
+    /* Centraliza os cards horizontalmente. */
+    /* Distribui os itens no espaço disponível */
+    gap: 28px;
+    /* Espaçamento entre os cards. */
+}
+
+.containerAlta {
+    /* Estilos para o container de notícias "Em Alta" (carousel horizontal). */
+    display: flex;
+    /* Ativa o Flexbox. */
+    align-items: center;
+    /* Centraliza os cards verticalmente (importante para o overflow). */
+    width: 100%;
+    /* Ocupa toda a largura disponível. */
+    overflow-x: auto;
+    /* Permite a rolagem horizontal quando o conteúdo exceder a largura. */
+    margin: 3em auto;
+    /* Margem superior/inferior e centralização horizontal. */
+    gap: 30px;
+    /* Espaçamento entre os cards. */
+    padding-left: 20px;
+    /* Preenchimento à esquerda. */
+
+    /* ADICIONE OU AUMENTE A ALTURA MÍNIMA AQUI */
+    min-height: 500px;
+    /* Define uma altura mínima para o container do carousel. */
+    /* **Ajuste este valor** para ser um pouco maior que o card mais alto. */
+}
+
+
+.carousel::-webkit-scrollbar {
+    /* Estilo para a barra de rolagem (scrollbar) em navegadores WebKit (Chrome, Safari). */
+    display: none;
+    /* Oculta a barra de rolagem horizontal (mantendo a funcionalidade de rolagem). */
+}
+
+
+h4 {
+    /* Estilos para o título 'Em Alta'. */
+    display: flex;
+    /* Ativa o Flexbox. */
+    align-items: center;
+    /* Centraliza verticalmente. */
+    font-weight: 500;
+    /* Peso médio. */
+    font-size: 60px;
+    /* Tamanho da fonte grande. */
+    color: #000;
+    /* Cor do texto preta. */
+    margin: 50px;
+    /* Margem para criar espaço. */
+    text-decoration: underline;
+    /* Adiciona sublinhado. */
+}
+
+.cardAlta {
+    /* Estilos para os cards individuais de notícias em alta. */
+    border-radius: 40px;
+    width: 320px;
+    height: 408px;
+    /* Altura fixa. */
+    box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.25);
+    /* Sombra. */
+    background: #fefbfb;
+    /* Cor de fundo branca suave. */
+
+    img {
+        align-items: center;
+    }
+
+
+    p {
+        /* Estilos para o título da notícia dentro do card (texto antes do <span>). */
+        font-weight: 500;
+        /* Peso médio. */
+        font-size: 28px;
+        /* Tamanho da fonte. */
+        text-align: center;
+        /* Centraliza o texto. */
+        color: #000;
+        /* Cor do texto preta. */
+    }
+
+    p span {
+        /* Estilos para a descrição da notícia dentro do card (texto dentro do <span>). */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 18px;
+        /* Tamanho da fonte menor. */
+        text-align: center;
+        /* Centraliza o texto. */
+        color: #000;
+        /* Cor do texto preta. */
+    }
+}
+
+.imagem {
+    /* Estilos para a div de imagem (provavelmente um fundo ou separador). */
+    max-width: 1730px;
+    /* Largura máxima. */
+    margin: 0;
+    /* Remove margens. */
+    padding: 0;
+    /* Remove preenchimentos. */
+    height: 0;
+    /* Altura zero (a imagem interna pode estar flutuando ou ter um posicionamento absoluto). */
+
+}
+
+.mensagem {
+    /* Estilos para a seção 'Avaliações'. */
+    display: flex;
+    /* Ativa o Flexbox. */
+    align-items: center;
+    /* Centraliza os itens verticalmente. */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente. */
+    gap: 40px;
+    /* Espaçamento entre a imagem de balão e o texto. */
+    margin-top: 220px;
+    /* Margem superior grande para separar da seção anterior. */
+
+    h5 {
+        /* Estilos para o título 'Avaliações'. */
+        font-weight: 700;
+        /* Peso negrito. */
+        font-size: 50px;
+        /* Tamanho grande. */
+        text-align: center;
+        /* Centraliza o texto. */
+        color: #45a353;
+        /* Cor do texto verde. */
+    }
+
+    p {
+        /* Estilos para o parágrafo de descrição. */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 35px;
+        /* Tamanho grande. */
+        text-align: center;
+        /* Centraliza o texto. */
+        color: #000;
+        /* Cor do texto preta. */
+    }
+
+}
+
+footer {
+    /* Estilos para o rodapé da página. */
+    max-width: 1080px;
+    /* Largura máxima. */
+    margin: auto;
+    /* Centraliza horizontalmente. */
+    /* Ativa o Flexbox para alinhar as colunas (formulário, navegação, contato). */
+    justify-content: space-between;
+    /* Distribui o espaço entre as colunas. */
+    padding: 54px 36px;
+    /* Preenchimento superior/inferior e lateral. */
+    background-color: #5173c2;
+    /* Cor de fundo azul escuro. */
+    margin-top: 500px;
+    /* Margem superior muito grande para separar do conteúdo anterior. */
+}
+
+/* Popup da finalização da compra */
+
+.form-box {
+    /* Estilos para a coluna do formulário de contato. */
+    align-items: stretch;
+    /* Estende os itens (pouco efeito em uma coluna). */
+    display: flex;
+    /* Ativa o Flexbox. */
+
+
+    h6 {
+        /* Estilos para o título do formulário 'Contate-Nos'. */
+        font-weight: 500;
+        /* Peso médio. */
+        font-size: 38px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+    }
+
+    p {
+        /* Estilos para os rótulos do formulário ('Nome', 'E-mail', 'Mensagem'). */
+        font-weight: 300;
+        /* Peso leve. */
+        font-size: 28px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+        margin-top: 10px;
+        /* Margem superior. */
+    }
+
+    .input-box input {
+        /* Estilos para os campos de entrada de texto (Nome e E-mail). */
+        position: relative;
+        /* Define o posicionamento. */
+        margin: 5px 0;
+        /* Margem vertical. */
+        border-style: none;
+        /* Remove a borda. */
+        border-radius: 15px;
+        width: 353px;
+        height: 48px;
+        /* Altura fixa. */
+        background: #fff;
+        /* Cor de fundo branca. */
+        margin-top: 10px;
+        /* Margem superior. */
+    }
+
+    textarea {
+        /* Estilos para o campo de área de texto ('Mensagem'). */
+        border-radius: 15px;
+        width: 353px;
+        height: 136px;
+        /* Altura fixa. */
+        margin-top: 10px;
+        /* Margem superior. */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 25px;
+        /* Tamanho da fonte. */
+        color: #595959;
+        /* Cor do texto cinza escuro. */
+        resize: none;
+    }
+
+    .input-box input::placeholder {
+        /* Estilos para o texto de placeholder dos inputs. */
+        margin-right: 21px;
+        /* Margem à direita (pouco efeito em placeholders). */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 25px;
+        /* Tamanho da fonte. */
+        color: #595959;
+        /* Cor do texto cinza escuro. */
+    }
+
+    button {
+        /* Estilos para o botão 'Enviar' do formulário. */
+        font-weight: 300;
+        /* Peso leve. */
+        font-size: 28px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+        border-radius: 25px;
+        /* Borda arredondada. */
+        width: 140px;
+        /* Largura fixa. */
+        height: 48px;
+        /* Altura fixa. */
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+        /* Sombra. */
+        background: #45a353;
+        /* Cor de fundo verde. */
+        margin-top: 20px;
+        /* Margem superior. */
+    }
+}
+
+.navegacao {
+    /* Estilos para a coluna de navegação no rodapé. */
+
+    h6 {
+        /* Estilos para o título 'Navegação'. */
+        font-weight: 500;
+        /* Peso médio. */
+        font-size: 38px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+    }
+
+    ul {
+        /* Estilos para a lista de links. */
+        gap: 39px;
+        /* Espaçamento entre os itens da lista (links). */
+
+        li a {
+            /* Estilos para os links na navegação do rodapé. */
+            font-weight: 300;
+            /* Peso leve. */
+            font-size: 35px;
+            /* Tamanho da fonte. */
+            color: #fff;
+            /* Cor do texto branca. */
+        }
+    }
+}
+
+.contato {
+    /* Estilos para a coluna de contato no rodapé. */
+
+
+    ul {
+        /* Estilos para a lista de informações de contato. */
+        column-count: auto;
+        /* Tenta criar colunas (pouco efeito aqui). */
+        align-items: center;
+        /* Centraliza os itens verticalmente. */
+        gap: 39px;
+        /* Espaçamento entre os itens da lista. */
+
+        li a {
+            /* Estilos para os links de contato (e-mail, instagram). */
+            font-weight: 300;
+            /* Peso leve. */
+            font-size: 35px;
+            /* Tamanho da fonte. */
+            color: #fff;
+            /* Cor do texto branca. */
+        }
+    }
+}
+
+.navegar {
+    display: flex;
+    margin-top: 50px;
+    gap: 26px;
+}
+
+/* BOTÃO HAMBÚRGUER (APARECE NO MOBILE) */
+.toggle-btn {
+    font-size: 32px;
+    color: #000;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 89px;
+    top: 120px;
+    height: 0;
+    width: 260px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu.open {
+    height: auto;
+    padding: 0.7rem 0;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu a {
+    font-weight: 500;
+    font-size: 22px;
+    color: #000;
+}
+
+.dropdown-menu .dropdown-buttons button {
+    font-weight: 500;
+    font-size: 22px;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background: #45a353;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* A PARTIR DE CERTO TAMANHO, ESCONDE MENU NORMAL E MOSTRA HAMBÚRGUER */
+@media screen and (max-width: 1080px) {
+
+    header nav ul,
+    header nav > div {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    header {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 980px){
+    body{
+        padding: 10px;
+    }
+
+    .container{
+        height: 100vh;
+    }
+}
